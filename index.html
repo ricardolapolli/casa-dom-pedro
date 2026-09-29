@@ -44,7 +44,7 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
 
 .hero{min-height:100vh;background:var(--nero);color:var(--white);display:flex;align-items:center;justify-content:center;isolation:isolate;padding:0}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.32),rgba(0,0,0,.7) 78%,rgba(0,0,0,.92))}
-.hero-bg{position:absolute;inset:-4%;background:url('a_close_up_abstract_texture_scene_a_full_frame_h.jpg') center/cover no-repeat;opacity:.52;will-change:transform;transform:scale(1.08)}
+.hero-bg{position:absolute;inset:-4%;background:url('hero.jpg') center/cover no-repeat;opacity:.52;will-change:transform;transform:scale(1.08)}
 .hero-glow{position:absolute;inset:auto 0 0 0;height:40vh;background:radial-gradient(circle at 50% 50%, rgba(183,136,82,.35), transparent 58%);filter:blur(40px);opacity:.9}
 .hero-content{position:relative;z-index:2;text-align:center;padding:8vw 6vw;max-width:1200px}
 .brand-lockup{width:min(560px,70vw);margin:0 auto 2.4rem}
@@ -89,12 +89,12 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
 .swatch .caption{position:absolute;left:1.3rem;right:1.3rem;bottom:1.35rem;z-index:2}
 .swatch .caption small{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;opacity:.65;margin-bottom:.45rem}
 .swatch .caption b{font-family:var(--serif);font-size:2rem;font-weight:400;line-height:1.02}
-.swatch.basalto::before{background-image:url('textura_de_pedra_grafite_fosca.jpg')}
+.swatch.basalto::before{background-image:url('basalto.jpg')}
 .swatch.carbone::before{background-image:linear-gradient(135deg,#3b3a39,#1c1c1d 62%,#35302a)}
-.swatch.nero::before{background-image:url('a_square_high_resolution_close_up_texture_image_o.jpg')}
-.swatch.travertino::before{background-image:url('a_close_up_flat_full_frame_texture_image_of_a_be.jpg')}
-.swatch.bronze::before{background-image:url('textura_metálica_bronze_acetinado.jpg')}
-.swatch.nogueira::before{background-image:url('textura_de_madeira_escura_em_nogueira.jpg')}
+.swatch.nero::before{background-image:url('nero.jpg')}
+.swatch.travertino::before{background-image:url('travertino.jpg')}
+.swatch.bronze::before{background-image:url('bronze.jpg')}
+.swatch.freijo::before{background-image:url('freijo.jpg')}
 
 .type{background:var(--paper)}
 .type .headline{grid-column:1/5;font-size:clamp(3rem,6vw,6rem)}
@@ -108,7 +108,7 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
 
 .d-section{background:#0d0d0e;color:var(--white)}
 .d-section .d-display{grid-column:1/7;display:flex;align-items:center;justify-content:center;min-height:58vh}
-.giant-d{font-family:var(--serif);font-size:clamp(18rem,36vw,38rem);line-height:.75;background:url('textura_de_madeira_escura_em_nogueira.jpg') center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 18px 44px rgba(0,0,0,.4))}
+.giant-d{font-family:var(--serif);font-size:clamp(18rem,36vw,38rem);line-height:.75;background:url('freijo.jpg') center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 18px 44px rgba(0,0,0,.4))}
 .d-section .copy-wrap{grid-column:8/13;align-self:center}
 .d-section h2{font-size:clamp(3rem,5.4vw,5.7rem)}
 
@@ -188,6 +188,22 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
   .logos-grid{grid-template-columns:1fr}
   .gallery-card,.gallery-card.tall,.partner-shot{min-height:300px}
 }
+
+/* Ajustes finais — versão aprovada */
+.hero-official-logo{display:block;width:min(640px,72vw);max-height:42vh;object-fit:contain;margin:0 auto 2.2rem;filter:drop-shadow(0 8px 28px rgba(0,0,0,.28))}
+.logo-card{background:transparent!important;border:0!important;box-shadow:none!important;padding:clamp(1rem,3vw,3rem)!important}
+.logo-card img{width:min(760px,100%);mix-blend-mode:multiply}
+.swatch.freijo::before{background-image:url('freijo.jpg')}
+.giant-d{background-image:url('freijo.jpg')!important;background-position:center;background-size:cover}
+.axis{grid-template-columns:minmax(90px,1fr) 132px minmax(90px,1fr);gap:16px}
+.axis>span:first-child{text-align:right}.axis>span:last-child{text-align:left}
+.axis .line{height:1px;background:rgba(17,17,17,.32);position:relative}
+.axis .line::before{content:"";position:absolute;left:50%;top:-4px;width:1px;height:9px;background:rgba(17,17,17,.25)}
+.axis .line::after{content:"";position:absolute;left:var(--pos,50%);right:auto;top:-5px;width:11px;height:11px;border-radius:50%;background:#111;transform:translateX(-50%)}
+.gallery{grid-template-columns:1.18fr .82fr;align-items:start}.gallery-card,.gallery-card.tall{min-height:0}.gallery-card img{height:auto;object-fit:contain}.gallery-side{align-content:start}
+.mockup-card img{height:auto!important;aspect-ratio:auto!important;object-fit:contain!important}
+.partner-shot{min-height:0}.partner-shot img{height:auto;object-fit:contain}.three-partners{grid-template-columns:1fr;gap:16px;align-content:center}.three-partners .logo-tile{min-height:180px}
+@media(max-width:900px){.hero-official-logo{width:min(620px,82vw)}.axis{grid-template-columns:1fr 90px 1fr;gap:10px}.gallery{grid-template-columns:1fr}.three-partners .logo-tile{min-height:140px}}
 </style>
 </head>
 <body>
@@ -196,8 +212,7 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
     <div class="hero-glow"></div>
     <div class="hero-content reveal in">
       <div class="kicker">Apresentação de marca · Casa Dom Pedro</div>
-      <div class="brand-stack"><span class="small">Casa</span><span>Dom Pedro</span></div>
-      <div class="tagline">Décor · Tech · Living</div>
+      <img class="hero-official-logo" src="logo-casa-dom-pedro-white.png" alt="Casa Dom Pedro — Décor · Tech · Living">
       <p class="hero-copy">Uma marca pensada para reunir soluções para o morar contemporâneo e abrigar novas frentes com unidade, presença e sofisticação.</p>
       <div class="hero-scroll">Role para explorar</div>
     </div>
@@ -215,7 +230,7 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
         <p class="copy reveal">O nome traz uma presença clássica, enquanto a construção visual assume um comportamento atual, preciso e arquitetônico. O resultado é uma identidade que equilibra tradição e contemporaneidade com uma estética sóbria, material e duradoura.</p>
         <div class="stats reveal">
           <div class="stat"><b>01</b><span>Marca-mãe</span></div>
-          <div class="stat"><b>05</b><span>Marcas parceiras</span></div>
+          <div class="stat"><b>03</b><span>Marcas parceiras</span></div>
           <div class="stat"><b>360°</b><span>Aplicação integrada</span></div>
         </div>
       </div>
@@ -239,7 +254,7 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
   <section class="logo-sec">
     <div class="container grid">
       <div class="logo-card reveal">
-        <img src="logo-casa-dom-pedro.png" alt="Logotipo Casa Dom Pedro">
+        <img src="logo-casa-dom-pedro-black.png" alt="Logotipo oficial Casa Dom Pedro">
       </div>
       <div class="logo-copy reveal">
         <div class="kicker">Logotipia</div>
@@ -260,7 +275,7 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
         <div class="swatch nero"><div class="caption"><small>Preto</small><b>Nero</b></div></div>
         <div class="swatch travertino"><div class="caption"><small>Bege</small><b>Travertino</b></div></div>
         <div class="swatch bronze"><div class="caption"><small>Bronze</small><b>Régio</b></div></div>
-        <div class="swatch nogueira"><div class="caption"><small>Marrom</small><b>Nogueira</b></div></div>
+        <div class="swatch freijo"><div class="caption"><small>Marrom</small><b>Freijó</b></div></div>
       </div>
     </div>
   </section>
@@ -306,11 +321,11 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
       </div>
       <div class="right reveal">
         <div class="axes">
-          <div class="axis"><span>Clássico</span><span class="line"></span><span>Contemporâneo</span></div>
-          <div class="axis"><span>Matéria</span><span class="line"></span><span>Tecnologia</span></div>
-          <div class="axis"><span>Calor</span><span class="line"></span><span>Precisão</span></div>
-          <div class="axis"><span>Sólido</span><span class="line"></span><span>Leve</span></div>
-          <div class="axis"><span>Estrutura</span><span class="line"></span><span>Flexibilidade</span></div>
+          <div class="axis" style="--pos:52%"><span>Clássico</span><span class="line"></span><span>Contemporâneo</span></div>
+          <div class="axis" style="--pos:46%"><span>Matéria</span><span class="line"></span><span>Tecnologia</span></div>
+          <div class="axis" style="--pos:54%"><span>Calor</span><span class="line"></span><span>Precisão</span></div>
+          <div class="axis" style="--pos:48%"><span>Sólido</span><span class="line"></span><span>Leve</span></div>
+          <div class="axis" style="--pos:50%"><span>Estrutura</span><span class="line"></span><span>Flexibilidade</span></div>
         </div>
       </div>
     </div>
@@ -322,17 +337,17 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
       <p class="copy reveal">Da fachada aos ambientes internos, a identidade se integra à arquitetura com discrição, hierarquia e alto valor percebido. A marca não compete com o espaço: ela o qualifica.</p>
       <div class="gallery reveal">
         <div class="gallery-card tall">
-          <img src="aplicacao-fachada.jpg" alt="Aplicação da marca na fachada">
+          <img src="fachada.jpg" alt="Aplicação da marca na fachada">
           <div class="overlay"><small>Fachada</small><b>Presença arquitetônica</b></div>
         </div>
         <div class="gallery-side">
           <div class="gallery-card">
-            <img src="aplicacao-recepcao.jpg" alt="Aplicação na recepção">
-            <div class="overlay"><small>Recepção</small><b>Assinatura institucional</b></div>
+            <img src="sala-interna.jpg" alt="Aplicação na recepção">
+            <div class="overlay"><small>Interior</small><b>Ecossistema de marcas</b></div>
           </div>
           <div class="gallery-card">
-            <img src="aplicacao-showroom.jpg" alt="Aplicação no showroom">
-            <div class="overlay"><small>Showroom</small><b>Ambiência & experiência</b></div>
+            <img src="totem.jpg" alt="Aplicação no showroom">
+            <div class="overlay"><small>Totem</small><b>Hierarquia & orientação</b></div>
           </div>
         </div>
       </div>
@@ -345,19 +360,19 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
       <p class="copy reveal">O sistema visual se adapta a diferentes escalas e canais, mantendo a mesma leitura premium: impresso, editorial, web e social media.</p>
       <div class="mockups reveal">
         <article class="mockup-card">
-          <img src="mockup-cartao.jpg" alt="Cartão de visita Casa Dom Pedro">
+          <img src="cartao.jpg" alt="Cartão de visita Casa Dom Pedro">
           <div class="meta"><small>Impresso institucional</small><b>Cartão de visita</b><p>Minimalismo, textura e contraste material em uma peça compacta e elegante.</p></div>
         </article>
         <article class="mockup-card">
-          <img src="mockup-revista.jpg" alt="Aplicação editorial em revista">
+          <img src="revista.jpg" alt="Aplicação editorial em revista">
           <div class="meta"><small>Editorial</small><b>Revista / catálogo</b><p>Uma linguagem capaz de sustentar narrativa, inspiração e apresentação de materiais.</p></div>
         </article>
         <article class="mockup-card">
-          <img src="mockup-macbook.jpg" alt="Site da Casa Dom Pedro em MacBook">
+          <img src="site.jpg" alt="Site da Casa Dom Pedro em MacBook">
           <div class="meta"><small>Digital</small><b>Website</b><p>Ambiente online coerente com a marca: sofisticado, leve e guiado por materialidade.</p></div>
         </article>
         <article class="mockup-card">
-          <img src="mockup-iphone.jpg" alt="Instagram da Casa Dom Pedro em iPhone">
+          <img src="instagram.jpg" alt="Instagram da Casa Dom Pedro em iPhone">
           <div class="meta"><small>Social media</small><b>Instagram</b><p>Conteúdo visual coeso, curadoria estética e presença editorial no cotidiano da marca.</p></div>
         </article>
       </div>
@@ -367,17 +382,13 @@ section{position:relative;padding:8vw 6vw;overflow:hidden}
   <section class="brands">
     <div class="container grid">
       <h2 class="display headline reveal">Marcas que passam a viver aqui.</h2>
-      <p class="copy reveal">Como marca guarda-chuva, Casa Dom Pedro abriga diferentes especialidades sob uma mesma lógica de experiência. O conjunto fortalece o ecossistema sem anular a individualidade de cada parceiro.</p>
+      <p class="copy reveal">Casa Dom Pedro reúne três especialidades complementares em uma experiência integrada. Cada marca preserva sua identidade, enquanto a Casa cria unidade, hierarquia e presença para o conjunto.</p>
       <div class="brands-wrap reveal">
-        <div class="partner-shot">
-          <img src="aplicacao-totem.jpg" alt="Totem da Casa Dom Pedro com marcas parceiras">
-        </div>
-        <div class="logos-grid">
-          <div class="logo-tile"><img src="logo-diore-white.png" alt="Diore Revestimentos"></div>
-          <div class="logo-tile"><img src="logo-imperart-white.png" alt="Imperart Móveis & Mármores"></div>
-          <div class="logo-tile"><img src="logo-unilux-white.png" alt="Unilux"></div>
+        <div class="partner-shot"><img src="totem.jpg" alt="Totem Casa Dom Pedro com Latéli, Home & Tech e Imperart"></div>
+        <div class="logos-grid three-partners">
+          <div class="logo-tile"><img src="logo-lateli-white.png" alt="Latéli"></div>
           <div class="logo-tile"><img src="logo-home-tech-white.png" alt="Home & Tech"></div>
-          <div class="logo-tile" style="grid-column:1/-1"><img src="logo-lateli-white.png" alt="Latéli Decor"></div>
+          <div class="logo-tile"><img src="logo-imperart-white.png" alt="Imperart"></div>
         </div>
       </div>
     </div>
